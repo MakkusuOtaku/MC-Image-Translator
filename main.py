@@ -1,7 +1,7 @@
-import os
+import os, json
 from PIL import Image
 
-blockMap = [
+concrete = [
     [(0, 0, 0), "black_concrete"],
     [(211, 211, 211), "light_gray_concrete"],
     [(128, 128, 128), "gray_concrete"],
@@ -19,6 +19,10 @@ blockMap = [
     [(89, 60, 31), "brown_concrete"],
     [(0, 140, 132), "cyan_concrete"],
 ]
+
+blockMap = concrete
+loadMap = json.load(open('palettes/'+input("Palette:    ")+'.json'))
+blockMap = loadMap['palette']
 
 image = Image.open(input("File Name:    "))
 width, height = image.size
