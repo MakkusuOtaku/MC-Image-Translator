@@ -1,0 +1,7 @@
+{
+	"palette" : [
+		[[255, 255, 255], "white_concrete"],
+		[[255, 0, 0], "blue_concrete"],
+		[[0, 0, 0], "black_concrete"]
+	]
+}
